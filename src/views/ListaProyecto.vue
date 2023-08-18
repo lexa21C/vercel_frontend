@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row m-1">
       <b-input-group size="sm" class="mb-2">
-        <b-form-input type="search" v-model="searchValue" placeholder="Search terms" @search-clear="clearSearch"></b-form-input>
+        <b-form-input type="search" v-model="searchValue" placeholder="Buscar" @search-clear="clearSearch"></b-form-input>
         <b-input-group-prepend is-text>
           <b-icon icon="search" @click="search"></b-icon>
         </b-input-group-prepend>
