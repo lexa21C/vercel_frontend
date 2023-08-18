@@ -1,32 +1,25 @@
 <template>
-  <div>
-  <div class="imglogin">
-    <img src="../assets/imagenes/WhatsApp Image 2023-08-12 at 9.37.28 PM.jpeg" width="200" height="200">
+  <div class="container">
+    <div class="row m-1 d-flex justify-content-center">
+      <b-card class="col-6">
+        <h1>Iniciar sesión</h1>
+        <form @submit.prevent="submitForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">Correo electronico</label>
+            <input type="text" class="form-control" id="username" name="username" v-model="username">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" v-model="password">
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+          </div>
+        </form>
+      </b-card>
+    </div>
   </div>
-    <div class="containerlogin">
-      <div class="row m-1 d-flex justify-content-center">
-        <b-card class="col-6">
-          <h1>Iniciar sesión</h1>
-          <form @submit.prevent="submitForm">
-            <div class="mb-3">
-              <label for="username" class="form-label">Correo electronico</label>
-              <input type="text" class="form-control" id="username" name="username" v-model="username">
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password" name="password" v-model="password">
-            </div>
-            <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-            </div>
-          </form>
-        </b-card>
-      </div>
-    </div>
-
-    </div>
-  </template>
-  
+</template>
 
 <script>
 import axios from 'axios'
@@ -92,17 +85,6 @@ export default {
 </script> 
 
 <style>
-.containerlogin{
-  margin-top: 0px;
-  height: 800px;
-  width: 800px;
-margin-left: 280px;
-}
-
-.imglogin{
-  text-align: center;
-}
-
 
 
 </style>
