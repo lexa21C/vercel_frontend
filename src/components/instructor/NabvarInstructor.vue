@@ -76,7 +76,7 @@
               this.$store.commit('clearState')
   
   
-              this.$router.push('/inicio')
+              this.$router.push('/')
           }
       }
   }
